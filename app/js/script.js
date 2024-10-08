@@ -10,9 +10,11 @@ createApp({
         getList(){
         // faccio la chiamata attraverso axios
             axios.get('http://localhost/php-dischi-json/api/')
-                .then(function (response) {
+                .then((response) => {
                     // handle success
-                    console.log(response);
+                    console.log(response.data);
+                    this.dischiList = response.data;
+
                 })
                 .catch(function (error) {
                     // handle error

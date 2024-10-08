@@ -20,18 +20,20 @@
         </div>
     </header>
     <main id="app" class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src=" " class="card-img-top" alt=" ">
-                    <div class="card-body">
-                      <h5 class="card-title">title</h5>
-                      <p class="card-text">artist:</p>
-                      <p class="card-text">date of release:</p>
+        <section id="disk" class="mb-4">
+            <div class="row justify-content-center">
+                <div class="col-4 mt-4" v-for = "(dischiListItem,index) in dischiList" :key="index">
+                    <div class="card disk-card text-white text-center py-3">
+                        <img :src="dischiListItem.poster" class="card-img-top disk-img" :alt="dischiListItem.title">
+                        <div class="card-body">
+                          <h5 class="card-title fw-bold">{{dischiListItem.title}}</h5>
+                          <p class="card-text">{{dischiListItem.author}}</p>
+                          <p class="card-text fw-bold">{{dischiListItem.year}}</p>
+                        </div>
                     </div>
-                  </div>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
     <!-- added vue 3 -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

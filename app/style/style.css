@@ -10,7 +10,17 @@ header{
     height: 90px;
     width: 90px;
 }
-main{
+body{
     background-color: #1d2e3d;
-    height: calc(100vh - 100px);
+}
+
+.disk-card{
+    background-color: #101f2e;
+    height: 380px;
+    width: 300px;
+}
+.disk-img{
+    height:200px;
+    width: 200px;
+    margin: 0 auto;
 }
